@@ -1,0 +1,454 @@
+:root {
+  --clr-teal: hsla(177, 68%, 64%, 1);
+  --clr-orange: hsla(12, 94%, 65%, 1);
+  --clr-pale-orange: hsla(33, 100%, 70%, 1);
+  --clr-white: hsla(20, 33%, 98%, 1);
+  --clr-black: hsla(244, 23%, 12%, 1);
+
+  --fw-700: 700;
+  --fw-400: 400;
+
+  --fs-xl: 4rem;
+  --fs-l: 6.5rem;
+  --fs-m: 3.2rem;
+  --fs-s: 1.6rem;
+
+  --fs-footer:1.6rem
+  --fs-btn: 1.8rem;
+
+  --lh-xl: 4.8rem;
+  --lh-l: 5.2rem;
+  --lh-m: 4rem;
+  --lh-s: 2.6rem;
+
+  --lh-footer:2.6rem;
+
+  --letter-space:-0.45px;
+
+
+  --ff-main:'IBM Plex Sans',sans-serif;
+}
+
+/* TABLET */
+
+@media screen and ((min-width: 48em) and (max-width: 63.9375em)) {
+  :root {
+    --fs-xl: 6.4rem;
+    --fs-l: 6.5rem;
+    --fs-s: 1.8rem;
+
+    --fs-btn: 1.8rem;
+
+    --lh-xl: 6.4rem;
+    --lh-l: 5.2rem;
+    --lh-s: 2.8rem;
+
+    --letter-space:-0.73px;
+
+  }
+}
+
+/* DESKTOP */
+
+@media screen and ((min-width: 64em)) {
+  :root {
+    --fs-xl: 8.8rem;
+    --fs-l: 6.5rem;
+    --fs-m: 4rem;
+    --fs-s: 2rem;
+
+    --fs-btn: 1.8rem;
+
+    --lh-xl: 8.8rem;
+    --lh-l: 5.2rem;
+    --lh-m: 5.2rem;
+    --lh-s: 3.4rem;
+
+    --letter-space:-1px;
+
+  }
+}
+
+
+/* __ RESET __ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li,
+ol {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* __ GENERAL __ */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+    background: url(assets/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 50vh;
+    background-position:top -25vh right -25vw;
+
+
+  font-size: 1.6rem;
+  font-family: var(--ff-main);
+  color: var(--clr-black);
+  font-weight: var(--fw-400);
+  line-height: var(--lh-s);
+}
+
+li,ul,ol{
+    padding: 0;
+}
+
+P{
+    font-size: var(--fs-s);
+}
+
+h1,h2{
+    font-weight: var(--fw-700);
+}
+
+.bg--tablet{
+    display: none;
+}
+.btn{
+    display: inline-block;
+    padding: 1.5rem 5.9rem;
+    border-radius: 12px;
+    letter-spacing: -.18px;
+    font-weight: var(--fw-700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .79rem;
+}
+
+
+.btn--ios{
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    margin-bottom: 1.6rem;
+}
+.btn--android{
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+/* __ HEADER -- */
+
+header{
+
+    padding: 4rem 2.4rem;
+    margin-bottom:12.4rem ;
+}
+
+.header__logo{
+    margin-bottom: 6.4rem;
+
+}
+
+.header__heading{
+    font-size: var(--fs-xl);
+    line-height: var(--lh-xl);
+    letter-spacing: var(--letter-space);
+    margin-bottom: 2rem;
+}
+
+
+/* __ MAIN -- */
+
+main{
+    position: relative;
+    margin-bottom: 6.4rem;
+}
+
+.illustration{
+    height: 60rem;
+    background-color: var(--clr-black);
+    display: flex;
+    justify-content: center;
+    align-content:flex-start ;
+    border-radius: 12px;
+
+}
+
+.screenshot{
+    position: absolute;
+    width: 20rem;
+    height: 43rem;
+    top: -9.8rem;
+}
+
+.main__description{
+    max-width: 44.6rem;
+    position: absolute;
+    top: 45rem;
+    padding: 4.8rem 3.6rem;
+    border-radius: 12px;
+    background-color: var(--clr-orange);
+    color: var(--clr-white);
+    z-index: 9999;
+
+}
+
+.main__heading{
+    font-size: var(--fs-m);
+    line-height: var(--lh-m);
+    margin-bottom: 1.2rem;
+}
+
+.main__text{
+    margin-bottom: 3.6rem;
+
+}
+
+.main__price{
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+}
+.main__price h3 {
+    font-size: var(--fs-l);
+    font-weight: var(--fw-700);
+}
+
+.main__price p{
+    font-size: 2rem;
+    font-weight: var(--fw-400);
+}
+
+
+/* ___ FOOTER ___ */
+footer{
+    margin-top:38rem ;
+    padding:0 2.4rem 8rem 2.4rem;
+    font-size: var(--fs-footer);
+}
+
+.footer__logo{
+    margin-bottom: 3.2rem;
+
+}
+
+.footer__mail{
+    font-weight: var(--fw-700);
+    font-size: var(--fs-footer);
+    margin-bottom: 6.4rem;
+
+
+}
+
+.footer__social
+
+{
+    display: flex;
+    gap:2rem ;
+}
+
+
+/* COMMON FOR TABLET & DESKTOP */
+
+@media screen and ((min-width: 48em)){
+    .bg--tablet{
+    display: block;
+    position: absolute;
+    height: 40rem;
+    top: 0;
+    right: 0;
+
+}
+
+.btn--ios:hover,.btn--ios:focus{
+    background-color: var(--clr-teal);
+
+}
+
+.btn--android:hover,.btn--android:focus{
+    background-color: var(--clr-pale-orange);
+}
+
+
+
+}
+
+
+/* ! TABLET --------- */
+@media screen and ((min-width: 48em) and (max-width: 63.9375em)){
+body{
+    background: url(assets/bg-main-tablet.png);
+    background-position: top -25rem,left -50rem;
+    position: relative;
+}
+
+
+
+header,main,footer{
+    padding: 0 3.3rem;
+}
+
+header{
+    padding-top:6rem;
+    margin-bottom: 24.9rem;
+
+}
+.wrapper--text{
+    margin-right: auto;
+    padding-right:21.5rem ;
+    }
+
+.header__heading{
+    margin-bottom: 2.8rem;
+}
+
+.screenshot{
+    top: -13.8rem;
+    left: 6.8rem;
+}
+
+.main__description{
+    top: 15rem;
+   left: 22rem;
+}
+
+footer{
+    margin-top: 18.7rem;
+    margin-bottom: 8.5rem;
+
+}
+
+.footer__txt-div
+{
+    display: flex;
+}
+
+}
+
+
+/* --- DESKTOP ___ */
+
+@media screen and (min-width:64em) {
+    header,main,footer{
+    padding: 0 16.5rem;
+}
+
+header{
+    padding-top:6.2rem;
+    margin-bottom: 33rem;
+
+}
+.header__logo{
+    margin-bottom:12.8rem;
+}
+
+.wrapper--text{
+    padding-right:35rem ;
+    }
+
+.header__heading{
+    margin-bottom: 4rem;
+}
+
+.screenshot{
+    top: -19.5rem;
+    left: 28rem;
+}
+
+.main__description{
+    top: 9rem;
+   left: 75rem;
+}
+.btn{
+    cursor: pointer;
+}
+
+footer{
+    margin-top: 21rem;
+    margin-bottom: 9.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer__text{
+    width: 45ch;
+}
+.footer__txt-div
+{
+    display: flex;
+}
+
+
+}
